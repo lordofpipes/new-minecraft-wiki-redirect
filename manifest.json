@@ -1,0 +1,48 @@
+{
+    "name": "New Minecraft Wiki Redirect",
+    "description": "Redirect to the new non-Fandom Minecraft wiki.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "icons": {
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "host_permissions": [
+        "*://minecraftwiki.net/*",
+        "*://minecraft.gamepedia.com/*",
+        "*://minecraft.fandom.com/*"
+    ],
+    "permissions": [
+        "declarativeNetRequest",
+        "storage"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "minecraft-wiki-redirect",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "options_ui": {
+        "page": "settings.html"
+    },
+    "action": {
+        "default_icon": {
+            "16": "img/icon16.png",
+            "24": "img/icon24.png",
+            "32": "img/icon32.png"
+        },
+        "default_title": "Toggle wiki redirect"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "new-minecraft-wiki-redirect@lordpipe",
+            "strict_min_version": "113.0"
+        }
+    }
+}

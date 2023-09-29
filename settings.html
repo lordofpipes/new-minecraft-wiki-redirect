@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                font-family: "Noto Sans", "Calibri", sans-serif;
+                max-width: 1162px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            button {
+                font-size: 30px;
+            }
+            .container {
+                margin: 30px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container"><button id="enable-permissions">
+            Enable permissions required for <span style="white-space: nowrap;">New Minecraft Wiki Redirect</span> to work
+        </button></div>
+        <div class="container"><button id="uninstall">
+            Uninstall <span style="white-space: nowrap;">New Minecraft Wiki Redirect</span>
+        </button></div>
+
+
+        <section class="container" id="tutorial">
+            <h1>New Minecraft Wiki Redirect</h1>
+            <p>This extension will redirect the Fandom Minecraft wiki to <a href="https://minecraft.wiki">https://minecraft.wiki</a></p>
+            <p>It contains no additional features, and does not collect telemetry data.</p>
+
+            <h3>Redirected domains</h3>
+
+            <p>This extension redirects the following domains:</p>
+
+            <ul>
+                <li><code>minecraft.fandom.com</code></li>
+                <li><code>minecraft.gamepedia.com</code></li>
+                <li><code>minecraftwiki.net</code></li>
+            </ul>
+
+            <h2>Usage instructions</h2>
+            <p>To get started, enable permissions for this extension by clicking the button above.</p>
+            <div><img src="img/tutorial/tutorial-1.png"></div>
+
+            <p>Click <code>Allow</code></p>
+            <div><img src="img/tutorial/tutorial-2.png"></div>
+
+            <h3>Toggling redirection</h3>
+
+            <p>You may wish to temporarily disable the redirection. To do so, you can click the browser action button for the extension. To show it on the toolbar, click <code>Extensions</code>, click the gear icon next to the extension, and check <code>Pin to Toolbar</code>:</p>
+            <div><img src="img/tutorial/tutorial-3.png"></div>
+            <p>Then click on it to toggle between on and off. When the <code>X</code> is shown, redirection is turned off.</p>
+            <div><img src="img/tutorial/tutorial-4.png"></div>
+
+            <h2>License</h2>
+
+            <p>Copyright &copy lordpipe 2023</p>
+
+            <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+
+            <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.</p>
+
+            <p>You should have received a copy of the GNU General Public License along with this program.  If not, see &lt<a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>&gt.</p>
+        </section>
+        <script src="permissions-request.js"></script>
+    </body>
+</html>
