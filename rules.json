@@ -5,39 +5,25 @@
         "action": {
             "type": "redirect",
             "redirect": {
-                "regexSubstitution": "https://minecraft.wiki/\\1"
+                "regexSubstitution": "https://minecraft.wiki/\\2"
             }
         },
         "condition": {
-            "regexFilter": "^https?://minecraft\\.fandom\\.com/(.*)",
+            "regexFilter": "^https?://(minecraft\\.fandom\\.com|minecraft\\.gamepedia\\.com|minecraftwiki\\.net)/(.*)",
             "resourceTypes": ["main_frame"]
         }
     },
     {
         "id": 2,
-        "priority": 100,
+        "priority": 101,
         "action": {
             "type": "redirect",
             "redirect": {
-                "regexSubstitution": "https://minecraft.wiki/\\1"
+                "regexSubstitution": "https://minecraft.wiki/w/\\2"
             }
         },
         "condition": {
-            "regexFilter": "^https?://minecraftwiki\\.net/(.*)",
-            "resourceTypes": ["main_frame"]
-        }
-    },
-    {
-        "id": 3,
-        "priority": 100,
-        "action": {
-            "type": "redirect",
-            "redirect": {
-                "regexSubstitution": "https://minecraft.wiki/\\1"
-            }
-        },
-        "condition": {
-            "regexFilter": "^https?://minecraft\\.gamepedia\\.com/(.*)",
+            "regexFilter": "^https?://(minecraft\\.fandom\\.com|minecraft\\.gamepedia\\.com|minecraftwiki\\.net)/wiki/(.*)",
             "resourceTypes": ["main_frame"]
         }
     }
