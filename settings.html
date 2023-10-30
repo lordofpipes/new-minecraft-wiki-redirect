@@ -2,38 +2,54 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <style>
-            body {
-                font-family: "Noto Sans", "Calibri", sans-serif;
-                max-width: 1162px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            button {
-                font-size: 30px;
-            }
-            .container {
-                margin: 30px;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
-        <div class="container"><button id="enable-permissions">
-            Enable permissions required for <span style="white-space: nowrap;">New Minecraft Wiki Redirect</span> to work
-        </button></div>
-        <div class="container"><button id="uninstall">
-            Uninstall <span style="white-space: nowrap;">New Minecraft Wiki Redirect</span>
-        </button></div>
+    <body class="permissions-granted">
+        <section class="container" id="settings">
+            <div class="warning section permissions-request" id="permissions-request">
+                <h3>Permissions are required to continue</h3>
+                <p>This extension must be assigned the following manifest v3 permissions to work properly:</p>
+                <ul>
+                    <li>Assign network request rules on <code>minecraft.fandom.com</code></li>
+                    <li>Assign network request rules on <code>minecraft.gamepedia.com</code></li>
+                    <li>Assign network request rules on <code>minecraftwiki.net</code></li>
+                </ul>
+                <div class="option"><button id="enable-permissions" class="primary permissions-request" autofocus>
+                    Enable permissions required for <span style="white-space: nowrap;">New Minecraft Wiki Redirect</span> to work
+                </button></div>
+            </div>
+            <div class="section">
+                <h3><span style="white-space: nowrap;">New Minecraft Wiki Redirect</span> settings</h3>
+                <div class="option">
+                    <label><input type="checkbox" name="redirect" checked> Enable redirect <strong class="permissions-request">⚠️  <a href="#">Permissions required</a></strong></label>
+                </div>
+                <div class="option">
+                    <label><input type="checkbox" name="project-promos" id="project-promos-checkbox" checked> Show blurbs on this preferences page for other project(s) made by the developer and friends</label>
+                </div>
+                <div class="option"><button id="uninstall">
+                    Uninstall this extension
+                </button></div>
+            </div>
+        </section>
+        <section class="container" id="project-promos" style="display: none;">
+            <div class="section uv">
+                <label for="project-promos-checkbox" class="close">x</label>
+                <div class="uv-container">
+                    <img src="img/uv.jpg" class="uv-screenshot">
+                    <div class="uv-text">
+                        <p><h3>Looking for a Minecraft server?</h3></p>
+                        <p>Join us at <strong>UltraVanilla</strong> &mdash; a wholesome not-for-profit Minecraft SMP server focused on building, events, and socializing. We're great for both serious and casual players alike. We have a nearly 5 year old world, a wiki full of lore, hundreds of map art and dozens of towns to visit!</p>
+                        <label><strong>Address:</strong> <input type="text" value="play.ultravanilla.world" readonly></label>
+                        <p><a href="https://wiki.ultravanilla.world" rel="noopener noreferrer" target="_blank">UltraVanilla Wiki</a> | <a href="https://ultravanilla.world/" rel="noopener noreferrer" target="_blank">UltraVanilla World Map</a> | <a href="https://discord.gg/23GdyeQaBs" rel="noopener noreferrer" target="_blank">UltraVanilla Discord</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
-        <section class="container" id="tutorial">
-            <h1>New Minecraft Wiki Redirect</h1>
-            <p>This extension will redirect the Fandom Minecraft wiki to <a href="https://minecraft.wiki">https://minecraft.wiki</a></p>
-            <p>It contains no additional features, and does not collect telemetry data.</p>
+        <section class="container" id="documentation">
+            <h1>Documentation</h1>
+            <p>This extension will redirect the Fandom Minecraft wiki to <a href="https://minecraft.wiki" rel="noopener noreferrer" target="_blank">https://minecraft.wiki</a></p>
+            <p>It contains no surprises, no data collection, no third party assets, and uses the minimal set of manifest v3 permissions. Unlike userscript-based alternatives, this uses the declarative net requests APIs to redirect the page before an HTTP request to Fandom is sent, so CPU time is not wasted loading the original page.</p>
 
             <h3>Redirected domains</h3>
 
@@ -58,17 +74,22 @@
             <div><img src="img/tutorial/tutorial-3.png"></div>
             <p>Then click on it to toggle between on and off. When the <code>X</code> is shown, redirection is turned off.</p>
             <div><img src="img/tutorial/tutorial-4.png"></div>
+        </section>
+        <section class="container" id="about">
+            <h2>About / License</h2>
 
-            <h2>License</h2>
+            <p>Made by lordpipe briefly after the Minecraft Wiki switched from Fandom to an independent wiki host.</p>
 
-            <p>Copyright &copy lordpipe 2023</p>
+            <p><a href="https://github.com/lordofpipes/new-minecraft-wiki-redirect" rel="noopener noreferrer" target="_blank">Source code on Github</a></p>
+
+            <p><strong>Copyright &copy lordpipe 2023</strong></p>
 
             <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
 
-            <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.</p>
+            <p>This program is distributed in the hope that it will be useful, but <strong>without any warranty</strong>; without even the implied warranty of <strong>merchantability</strong> or <strong>fitness for a particular purpose</strong>.  See the GNU General Public License for more details.</p>
 
-            <p>You should have received a copy of the GNU General Public License along with this program.  If not, see &lt<a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>&gt.</p>
+            <p><a href="LICENSE" rel="noopener noreferrer" target="_blank">GPLv3 License Plaintext</a></p>
         </section>
-        <script src="permissions-request.js"></script>
+        <script src="settings.js"></script>
     </body>
 </html>

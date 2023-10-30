@@ -16,6 +16,10 @@ async function setupPermissions() {
 }
 
 browser.runtime.onInstalled.addListener(async (event) => {
+    // disable the blurb in the preferences page if the user updated from an older version that did not have it
+    if (event.reason === "update" && event.previousVersion === "1.0.0" || event.previousVersion === "1.1.0")
+        await browser.storage.local.set({projectPromos: false});
+
     if (!await hasPermissions())
         await setupPermissions();
 });
@@ -38,7 +42,7 @@ async function getAllTabsWithHostPermissions() {
     return selectedTabs;
 }
 
-function configureDisabledStatus(disabled) {
+async function configureDisabledStatus(disabled) {
     browser.action.setBadgeBackgroundColor({color: [255, 0, 0, 255]});
     browser.action.setBadgeText({text: disabled ? 'X' : ''});
     browser.declarativeNetRequest.updateEnabledRulesets(disabled ? {
@@ -47,23 +51,38 @@ function configureDisabledStatus(disabled) {
         enableRulesetIds: ["minecraft-wiki-redirect"]
     });
     browser.storage.local.set({disabled: disabled});
-}
-
-browser.action.onClicked.addListener(async () => {
-    if (!await hasPermissions()) {
-        await setupPermissions();
-        return;
-    }
-    const disabled = !(await browser.storage.local.get(["disabled"])).disabled;
-    configureDisabledStatus(disabled);
 
     // if the user enables it, refresh all of their Fandom Minecraft Wiki tabs
     if (!disabled) {
         const tabs = await getAllTabsWithHostPermissions();
         tabs.forEach(tab => browser.tabs.reload(tab.id));
     }
+}
+
+browser.runtime.onMessage.addListener(async (message) => {
+    if (message.action === "change-redirect-state") {
+        await configureDisabledStatus(message.state);
+    }
 });
 
-(async function() {
+browser.action.onClicked.addListener(async () => {
+    const oldState = !(await browser.storage.local.get(["disabled"])).disabled;
+    let newState = !oldState;
+    if (!await hasPermissions()) {
+        newState = false;
+        await setupPermissions();
+    }
+
+    try {
+        browser.runtime.sendMessage({ action: "change-redirect-state", state: newState });
+        await configureDisabledStatus(newState);
+    } catch (err) {
+        // preference page is not open
+    }
+
+    await configureDisabledStatus(disabled);
+});
+
+(async () => {
     configureDisabledStatus((await browser.storage.local.get(["disabled"])).disabled || false);
 })();

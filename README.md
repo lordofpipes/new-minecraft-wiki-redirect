@@ -5,7 +5,7 @@ New Minecraft Wiki Redirect
 
 This extension will redirect the Fandom Minecraft wiki to <https://minecraft.wiki>
 
-It contains no additional features, and does not collect telemetry data.
+It contains no surprises, no data collection, no third party assets, and uses the minimal set of manifest v3 permissions. Unlike userscript-based alternatives, this uses the declarative net requests APIs to redirect the page before an HTTP request to Fandom is sent, so CPU time isn't wasted loading the original page.
 
 ### Redirected domains
 
