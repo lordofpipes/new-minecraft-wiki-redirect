@@ -15,6 +15,8 @@ This extension redirects the following domains:
 - `minecraft.gamepedia.com`
 - `minecraftwiki.net`
 
+The non-English Fandom wikis are excluded from the redirect rules, because they have not yet moved from Fandom.
+
 Usage instructions
 ------------------
 

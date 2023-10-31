@@ -26,5 +26,16 @@
             "regexFilter": "^https?://(minecraft\\.fandom\\.com|minecraft\\.gamepedia\\.com|minecraftwiki\\.net)/wiki/(.*)",
             "resourceTypes": ["main_frame"]
         }
+    },
+    {
+        "id": 3,
+        "priority": 103,
+        "action": {
+            "type": "allow"
+        },
+        "condition": {
+            "regexFilter": "^https?://(minecraft\\.fandom\\.com|minecraft\\.gamepedia\\.com|minecraftwiki\\.net)/(cs|de|ca|da|el|fi|fr|hu|id|es|it|ja|ko|lzh|nl|pl|pt|ru|th|tr|uk|zh)/.*",
+            "resourceTypes": ["main_frame"]
+        }
     }
 ]
