@@ -66,21 +66,20 @@ browser.runtime.onMessage.addListener(async (message) => {
 });
 
 browser.action.onClicked.addListener(async () => {
-    const oldState = !(await browser.storage.local.get(["disabled"])).disabled;
+    const oldState = (await browser.storage.local.get(["disabled"])).disabled;
     let newState = !oldState;
     if (!await hasPermissions()) {
         newState = false;
         await setupPermissions();
     }
 
+    await configureDisabledStatus(newState);
     try {
-        browser.runtime.sendMessage({ action: "change-redirect-state", state: newState });
-        await configureDisabledStatus(newState);
+        await browser.runtime.sendMessage({ action: "change-redirect-state", state: !newState });
     } catch (err) {
         // preference page is not open
     }
 
-    await configureDisabledStatus(disabled);
 });
 
 (async () => {
