@@ -34,15 +34,20 @@ button, .button {
     margin: 0 4px;
     padding: 4px;
     text-decoration: none;
-
 }
 button.primary, .button.primary {
     background-color: #0061e0;
     color: #fbfbfe;
 }
-button.primary:focus, .button.primary:focus {
+button:focus, .button:focus {
     outline: 2px solid #0060df;
     outline-offset: 2px;
+}
+button:active, .button:active, button:hover, .button:hover, .uv .close:active, .uv .close:hover {
+    background-color: #dededf;
+}
+button.primary:active, .button.primary:active, button.primary:hover, .button.primary:hover {
+    background-color: #0250bb;
 }
 
 h1 {
@@ -71,10 +76,8 @@ h3 {
     padding: 16px;
     border-radius: 13px;
     margin: 18px 0;
-    /*border: 1px solid #9c9c9f22;*/
 }
 .warning {
-    /*background-color: #fff5f5;*/
     background-color: #ccdff9;
     border: 1px solid #0061e0;
 
@@ -137,8 +140,6 @@ nav {
     background-color: #ffffff;
 }
 
-
-
 .uv input {
     background-color: #eeeeee;
     border: 1px solid transparent; 
@@ -187,16 +188,28 @@ body.permissions-granted .permissions-request {
         background-color: #2f2e36;
     }
 
-    .section button {
+    .section button, .uv .close {
         background-color: #3e3d44;
+    }
+    button:active, button:hover, .uv .close:active, .uv .close:hover {
+        background-color: #4d4c52;
+    }
+    .section button.primary:active,
+    .section .button.primary:active,
+    .section button.primary:hover,
+    .section .button.primary:hover {
+        background-color: #80ebff;
     }
 
     button.primary, .button.primary {
         background-color: #00ddff;
         color: #292f38;
     }
-    button.primary:focus, .button.primary:focus {
+    button:focus, .button:focus {
         outline: 2px solid #00ddff;
+    }
+    button.primary:active, .button.primary:active, button.primary:hover, .button.primary:active {
+        background-color: #80ebff;
     }
 
     .warning {
@@ -209,9 +222,5 @@ body.permissions-granted .permissions-request {
         padding: 7px;
         border-radius: 4px;
         color: #d0a3d1;
-    }
-
-    .uv .close {
-        background-color: #3e3d44;
     }
 }
