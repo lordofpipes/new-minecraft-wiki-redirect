@@ -1,16 +1,16 @@
 {
     "name": "New Minecraft Wiki Redirect",
     "description": "Redirect to the new non-Fandom Minecraft wiki.",
-    "version": "1.3.2",
+    "version": "1.4.0",
     "manifest_version": 3,
     "icons": {
         "48": "img/icon48.png",
         "128": "img/icon128.png"
     },
     "host_permissions": [
-        "*://minecraftwiki.net/*",
-        "*://minecraft.gamepedia.com/*",
-        "*://minecraft.fandom.com/*"
+        "*://minecraft.fandom.com/*",
+        "*://*.gamepedia.com/*",
+        "*://*.minecraftwiki.net/*"
     ],
     "permissions": [
         "declarativeNetRequest",

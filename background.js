@@ -1,9 +1,9 @@
 async function hasPermissions() {
     return await browser.permissions.contains({
         origins: [
-            "*://minecraftwiki.net/*",
-            "*://minecraft.gamepedia.com/*",
-            "*://minecraft.fandom.com/*"
+            "*://minecraft.fandom.com/*",
+            "*://*.gamepedia.com/*",
+            "*://*.minecraftwiki.net/*",
         ]
     });
 }
@@ -12,7 +12,7 @@ async function setupPermissions() {
     let createData = {
         url: "settings.html",
     };
-    let creating = browser.tabs.create(createData);
+    browser.tabs.create(createData);
 }
 
 browser.runtime.onInstalled.addListener(async (event) => {

@@ -1,7 +1,7 @@
 const PERMISSIONS = {
-        origins: [
-        "*://minecraftwiki.net/*",
-        "*://minecraft.gamepedia.com/*",
+    origins: [
+        "*://*.minecraftwiki.net/*",
+        "*://*.gamepedia.com/*",
         "*://minecraft.fandom.com/*"
     ]
 };

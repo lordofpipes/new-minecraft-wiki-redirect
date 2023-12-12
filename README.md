@@ -12,10 +12,32 @@ It contains no surprises, no data collection, no third party assets, and uses th
 This extension redirects the following domains:
 
 - `minecraft.fandom.com`
+- `minecraft.fandom.com/de`
+- `minecraft.fandom.com/fr`
+- `minecraft.fandom.com/es`
+- `minecraft.fandom.com/ko`
+- `minecraft.fandom.com/pt`
+- `minecraft.fandom.com/ru`
+- `minecraft.fandom.com/uk`
+- `minecraft.fandom.com/zh`
 - `minecraft.gamepedia.com`
+- `minecraft-de.gamepedia.com`
+- `minecraft-fr.gamepedia.com`
+- `minecraft-es.gamepedia.com`
+- `minecraft-ko.gamepedia.com`
+- `minecraft-pt.gamepedia.com`
+- `minecraft-ru.gamepedia.com`
+- `minecraft-uk.gamepedia.com`
+- `minecraft-zh.gamepedia.com`
 - `minecraftwiki.net`
-
-The non-English Fandom wikis are excluded from the redirect rules, because they have not yet moved from Fandom.
+- `de.minecraftwiki.net`
+- `fr.minecraftwiki.net`
+- `es.minecraftwiki.net`
+- `ko.minecraftwiki.net`
+- `pt.minecraftwiki.net`
+- `ru.minecraftwiki.net`
+- `uk.minecraftwiki.net`
+- `zh.minecraftwiki.net`
 
 Usage instructions
 ------------------
