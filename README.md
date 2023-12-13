@@ -7,6 +7,8 @@ This extension will redirect the Fandom Minecraft wiki to <https://minecraft.wik
 
 It contains no surprises, no data collection, no third party assets, and uses the minimal set of manifest v3 permissions. Unlike userscript-based alternatives, this uses the declarative net requests APIs to redirect the page before an HTTP request to Fandom is sent, so CPU time isn't wasted loading the original page.
 
+<a href="https://addons.mozilla.org/en-US/firefox/addon/new-minecraft-wiki-redirect/" title="Documentation in English">English</a> | <a href="https://addons.mozilla.org/pl/firefox/addon/new-minecraft-wiki-redirect/" title="Dokumentacja w języku polskim">Polski</a> | <a href="https://addons.mozilla.org/de/firefox/addon/new-minecraft-wiki-redirect/" title="Dokumentation auf Deutsch">Deutsch</a> | <a href="https://addons.mozilla.org/es/firefox/addon/new-minecraft-wiki-redirect/" title="Documentación en español">Español</a> | <a href="https://addons.mozilla.org/fr/firefox/addon/new-minecraft-wiki-redirect/" title="Documentation en français">Français</a> | <a href="https://addons.mozilla.org/ko/firefox/addon/new-minecraft-wiki-redirect/" title="한국어 문서">한국어</a>
+
 ### Redirected domains
 
 This extension redirects the following domains:
