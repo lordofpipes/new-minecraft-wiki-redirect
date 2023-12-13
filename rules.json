@@ -89,7 +89,7 @@
         "action": {
             "type": "redirect",
             "redirect": {
-                "regexSubstitution": "https://\\2.minecraft.wiki/\\3"
+                "regexSubstitution": "https://\\1.minecraft.wiki/\\2"
             }
         },
         "condition": {
@@ -103,7 +103,7 @@
         "action": {
             "type": "redirect",
             "redirect": {
-                "regexSubstitution": "https://\\2.minecraft.wiki/w/\\3"
+                "regexSubstitution": "https://\\1.minecraft.wiki/w/\\2"
             }
         },
         "condition": {
