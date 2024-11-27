@@ -10,7 +10,9 @@
         },
         "condition": {
             "regexFilter": "^https?://(minecraft\\.fandom\\.com|minecraft\\.gamepedia\\.com|minecraftwiki\\.net)/(.*)",
-            "resourceTypes": ["main_frame"]
+            "resourceTypes": [
+                "main_frame"
+            ]
         }
     },
     {
@@ -24,7 +26,9 @@
         },
         "condition": {
             "regexFilter": "^https?://(minecraft\\.fandom\\.com|minecraft\\.gamepedia\\.com|minecraftwiki\\.net)/wiki/(.*)",
-            "resourceTypes": ["main_frame"]
+            "resourceTypes": [
+                "main_frame"
+            ]
         }
     },
     {
@@ -37,8 +41,10 @@
             }
         },
         "condition": {
-            "regexFilter": "^https?://minecraft\\.fandom\\.com/(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th)/(.*)",
-            "resourceTypes": ["main_frame"]
+            "regexFilter": "^https?://minecraft\\.fandom\\.com/(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th|nl|it)/(.*)",
+            "resourceTypes": [
+                "main_frame"
+            ]
         }
     },
     {
@@ -51,8 +57,10 @@
             }
         },
         "condition": {
-            "regexFilter": "^https?://minecraft\\.fandom\\.com/(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th)/wiki/(.*)",
-            "resourceTypes": ["main_frame"]
+            "regexFilter": "^https?://minecraft\\.fandom\\.com/(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th|nl|it)/wiki/(.*)",
+            "resourceTypes": [
+                "main_frame"
+            ]
         }
     },
     {
@@ -65,8 +73,10 @@
             }
         },
         "condition": {
-            "regexFilter": "^https?://minecraft-(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th)\\.gamepedia\\.com/(.*)",
-            "resourceTypes": ["main_frame"]
+            "regexFilter": "^https?://minecraft-(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th|nl|it)\\.gamepedia\\.com/(.*)",
+            "resourceTypes": [
+                "main_frame"
+            ]
         }
     },
     {
@@ -79,8 +89,10 @@
             }
         },
         "condition": {
-            "regexFilter": "^https?://minecraft-(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th)\\.gamepedia\\.com/wiki/(.*)",
-            "resourceTypes": ["main_frame"]
+            "regexFilter": "^https?://minecraft-(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th|nl|it)\\.gamepedia\\.com/wiki/(.*)",
+            "resourceTypes": [
+                "main_frame"
+            ]
         }
     },
     {
@@ -93,8 +105,10 @@
             }
         },
         "condition": {
-            "regexFilter": "^https?://(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th)\\.minecraftwiki\\.net/(.*)",
-            "resourceTypes": ["main_frame"]
+            "regexFilter": "^https?://(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th|nl|it)\\.minecraftwiki\\.net/(.*)",
+            "resourceTypes": [
+                "main_frame"
+            ]
         }
     },
     {
@@ -107,8 +121,10 @@
             }
         },
         "condition": {
-            "regexFilter": "^https?://(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th)\\.minecraftwiki\\.net/wiki/(.*)",
-            "resourceTypes": ["main_frame"]
+            "regexFilter": "^https?://(de|es|fr|ko|pt|ru|uk|zh|ja|lzh|th|nl|it)\\.minecraftwiki\\.net/wiki/(.*)",
+            "resourceTypes": [
+                "main_frame"
+            ]
         }
     },
     {
@@ -118,8 +134,10 @@
             "type": "allow"
         },
         "condition": {
-            "regexFilter": "^https?://(minecraft\\.fandom\\.com|minecraft\\.gamepedia\\.com|minecraftwiki\\.net)/(cs|ca|da|el|fi|hu|id|it|nl|pl|tr)/.*",
-            "resourceTypes": ["main_frame"]
+            "regexFilter": "^https?://(minecraft\\.fandom\\.com|minecraft\\.gamepedia\\.com|minecraftwiki\\.net)/(cs|ca|da|el|fi|hu|id|it|nl|pl|tr|it)/.*",
+            "resourceTypes": [
+                "main_frame"
+            ]
         }
     }
 ]
